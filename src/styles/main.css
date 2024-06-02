@@ -1,0 +1,448 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER */
+.header-inner {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-title h1 {
+  margin: 0.5em 0.2em;
+  letter-spacing: 4px;
+  font-weight: 300;
+  font-size: 4em;
+  font-family: "Rajdhani", sans-serif;
+  display: inline-block;
+}
+
+/* NAVIGATION */
+nav {
+  width: 100%;
+  padding: 8px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.nav__list {
+  text-align: center;
+}
+
+li, a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block
+}
+
+.nav__list li {
+  padding: 25px;
+  line-height: 24px;
+}
+
+.nav__list li a {
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: none;
+  color: #616161;
+  cursor: pointer;
+}
+
+.nav__list li a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.nav__item {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+}
+
+.skip__to__content {
+  top: -25px;
+  left: 0;
+  padding: 9px 13px 10px 10px;
+  z-index: 50;
+  font-size: 11px;
+  font-family: "Rajdhani", sans-serif;
+  position: absolute;
+  background-color: brown;
+  color: rgb(248, 245, 245);
+  text-align: center;
+}
+
+.skip__to__content:focus {
+  top: 0;
+  text-decoration: none;
+}
+
+
+/* DRAWER */
+.drawer {
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+  z-index: 2;
+  min-width: 44px;
+  min-height: 44px;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: brown;
+  list-style: none;
+}
+
+.drawer a {
+  min-width: 44px;
+  min-height: 44px;
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 2em;
+}
+
+/* MAIN */
+.hero-main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-main img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.resto-list {
+  gap: 15px;
+  padding: 18px 18px 120px 18px;
+  margin-bottom: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-resto {
+  border: 3px solid whitesmoke;
+  border-radius: 10px;
+  z-index: 1;
+  width: 300px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-resto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-resto {
+  padding: 17px;
+}
+
+.resto-name {
+  font-weight: 800;
+  font-size: 1.7em;
+  margin-bottom: 15px;
+  font-family: "Rajdhani", sans-serif;
+  text-decoration: underline;
+}
+
+.description-resto {
+  margin-top: 8px;
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+  text-align: justify;
+}
+
+.resto-city {
+  width: 49%;
+  border-radius: 5px;
+  padding: 7px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Rajdhani", sans-serif;
+  background-color: brown;
+  color: whitesmoke;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-resto {
+  margin-top: 15px;
+  font-size: 2em;
+  display: flex;
+  color: #dfa909;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 1em;
+  bottom: 0;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  z-index: 2;
+  font-family: "Rajdhani", sans-serif;
+  background-color: rgb(165, 42, 42);
+  text-align: center;
+  position: fixed;
+  color: whitesmoke;
+}
+
+/* DETAIL ITEM RESTO */
+.detail-resto {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 18px 18px 120px 18px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant__title {
+  font-size: 2.1em;
+  font-family: "Galada", cursive;
+  font-weight: 200;
+  font-style: normal;
+  opacity: 75%;
+}
+
+.restaurant__poster {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.restaurant__info h3 {
+  font-size: 1.75em;
+  margin-bottom: 15px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.restaurant__city,
+.restaurant__address,
+.restaurant__rating {
+  margin-top: 17px;
+}
+
+.restaurant__city h4,
+.restaurant__address h4,
+.restaurant__rating h4,
+.restaurant__description h4,
+.restaurant__menu h4 {
+  font-size: 1.2em;
+  margin-bottom: 6px;
+}
+
+.restaurant__city p,
+.restaurant__address p,
+.restaurant__rating p {
+  margin: 5px 0;
+}
+
+.restaurant__description {
+  margin-top: 17px;
+}
+
+.restaurant__description p {
+  margin: 5px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.layout__menus {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.food__menus h5,
+.drink__menus h5 {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  text-decoration: underline;
+}
+
+.food__menus ul,
+.drink__menus ul {
+  padding: 0;
+}
+
+.food__menus li,
+.drink__menus li {
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+
+
+.restaurant__reviews {
+  margin-top: 20px;
+}
+
+.restaurant__reviews h3 {
+  font-size: 1.75em;
+  margin-bottom: 5px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.reviews, 
+.list-menu-resto {
+  display: block;
+  margin-top: 5px;
+}
+
+.reviews_header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.reviews_name {
+  font-weight: 700;
+  color: brown;
+}
+
+.reviews_date {
+  color: #6b6a6a;
+}
+
+.reviews_des {
+  margin-bottom: 17px;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 70px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.resto-list-favorite {
+  gap: 15px;
+  padding: 18px 18px 120px 18px;
+  margin-bottom: 75px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.favorite_content h4 {
+  font-size: 2.2em;
+  font-family: "Rajdhani", sans-serif;
+  color: #535050;
+  text-align: center;
+  opacity: 90%;
+  letter-spacing: 2px;
+}
+
+.loading-icon {
+  animation: rotate 3s linear infinite;
+  width: 55px;
+  height: 55px;
+}
+
+.go-detail {
+  color: black;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .header-title h1 {
+    font-weight: 300;
+    font-size: 2.5em;
+    letter-spacing: 4px;
+    margin: 1.25em 0.25em 0.5em 0.25em;
+    display: inline-block;
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  /*display mobile navbar hilang*/
+  .nav__list {
+    display: none;
+  }
+
+  .drawer {
+    z-index: 2; 
+    min-width: 44px;
+    min-height: 44px;
+    display: none;
+    font-size: 0.75em;
+    padding: 10px;
+  }
+
+  .drawer-button {
+    top: 5px;
+    right: 20px;
+    font-size: 2rem;
+    position: absolute;
+    display: inline-block;
+    color: #535050;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .drawer-button {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px){
+  .hero-main {
+    min-width: 1000px;
+  }
+}
+
+@media (max-width: 452px){
+  .hero-main {
+    min-width: unset;
+  }
+}
